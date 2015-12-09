@@ -38,7 +38,7 @@ If you have a full url you can call the withUrl method:
             public void onPostExecute(JSONObject object) {
               // called after the request is executed, with the result object
             }
-        }).withUrl(https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal")
+        }).withUrl("https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal")
         .executeRequest();
     ```
     
