@@ -42,3 +42,20 @@ If you have a full url you can call the withUrl method:
         .executeRequest();
     ```
     
+If you want to send a payload JSON object call the attachJSON method:
+
+``` java
+       new APIRequest(new APIRequest.Delegate() {
+            @Override
+            public void onPreExecute() {
+                // do anything before executing the request. (UI thread)
+            }
+
+            @Override
+            public void onPostExecute(JSONObject object) {
+              // called after the request is executed, with the result object
+            }
+        }).withUrl("https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal")
+          .attachJSON(json.toString()) 
+        .executeRequest();
+    ```
