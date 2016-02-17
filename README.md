@@ -23,7 +23,7 @@ The request type is by default POST. (No need to call setRequestType if it is PO
         .addParam("origin","torronto")
         .addParam("destination","Montreal")
         .executeRequest();
-    ```
+```
     
     
 If you have a full url you can call the withUrl method:
@@ -40,7 +40,7 @@ If you have a full url you can call the withUrl method:
             }
         }).withUrl("https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal")
         .executeRequest();
-    ```
+```
     
 If you want to send a payload JSON object call the attachJSON method:
 
@@ -58,4 +58,4 @@ If you want to send a payload JSON object call the attachJSON method:
         }).withUrl("https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal")
           .attachJSON(json.toString()) 
         .executeRequest();
-    ```
+```
