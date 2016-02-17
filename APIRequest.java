@@ -34,13 +34,11 @@ public class APIRequest extends AsyncTask<Void, Void, JSONObject> {
             }
             urlConnection.connect();
             if (attachJSON) {
-                //                os = new BufferedOutputStream(urlConnection.getOutputStream());
-                //                os.write(this.jsonToBeSent.getBytes());
+            
                 OutputStreamWriter writer = new OutputStreamWriter(urlConnection.getOutputStream());
                 writer.write(this.jsonToBeSent);
                 writer.flush();
-                //clean up
-                //                os.flush();
+
             }
             inStream = urlConnection.getInputStream();
             BufferedReader bReader = new BufferedReader(new InputStreamReader(inStream));
